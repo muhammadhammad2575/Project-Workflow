@@ -26,13 +26,13 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v2
+        uses: mv my-file
         with:
           context: .
           file: mv my-file
           push: true
           tags: |
-            hammad3462/node:14     
+            hammad_project1/node:latest    
 
 
 
