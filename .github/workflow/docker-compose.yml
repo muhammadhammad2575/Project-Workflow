@@ -1,0 +1,22 @@
+name: Dockerize Full-Stack
+
+on:
+  push:  
+    branches:
+      - Dev
+
+jobs:
+  dockerize:
+    name: Dockerize Full-Stack
+    runs-on: ubuntu-latest  
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  
+
+      - name: Set up Node.js environment  
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+    
