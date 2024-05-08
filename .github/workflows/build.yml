@@ -32,5 +32,5 @@ jobs:
           file: my-file/Dockerfile  # Specify the correct path to your Dockerfile
           push: true
           tags: |
-            hammad_project1/node:latest
+            hammad_project1:latest
 
