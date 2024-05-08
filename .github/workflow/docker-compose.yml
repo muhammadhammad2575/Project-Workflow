@@ -19,11 +19,20 @@ jobs:
         with:
           node-version: '14'
           
-      - name: Move Folder
-        uses: mv my-file 
+      - name: Log into Docker-Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build Docker image
-        uses: docker build -t node:14        
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: mv my-file
+          push: true
+          tags: |
+            hammad3462/node:14     
 
 
 
