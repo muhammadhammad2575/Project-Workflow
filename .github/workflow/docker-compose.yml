@@ -18,5 +18,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '14-salpine'
+          
+      - name: Move File
+        uses: mv Dockerfile 
+
+      - name: Build Docker image
+        uses: docker build -t node:14-salpine        
+
+
 
     
