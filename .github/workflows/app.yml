@@ -3,7 +3,7 @@ name: Dockerize Full-Stack
 on:
   push:  
     branches:
-      - master
+      -master
 
 jobs:
   dockerize:
